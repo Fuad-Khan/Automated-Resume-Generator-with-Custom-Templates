@@ -8,36 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create Your Resume</h1>
-        <form action="generate_resume.php" method="post" id="resumeForm">
-            <label for="name">Full Name:</label>
+        <h1>Automated Resume Generator</h1>
+        <form action="generate_resume.php" method="POST">
+            <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
 
-            <label for="education">Education:</label>
-            <input type="text" id="education" name="education" required>
+            <label for="education">Education</label>
+            <textarea id="education" name="education" required></textarea>
 
-            <label for="skills">Skills (comma separated):</label>
-            <input type="text" id="skills" name="skills" required>
+            <label for="skills">Skills</label>
+            <textarea id="skills" name="skills" required></textarea>
 
-            <label for="experience">Experience:</label>
-            <textarea id="experience" name="experience" rows="5" required></textarea>
+            <label for="experience">Experience</label>
+            <textarea id="experience" name="experience" required></textarea>
 
-            <label for="template">Choose Template:</label>
+            <label for="template">Choose Template</label>
             <select id="template" name="template" required>
-                <option value="template1">Template 1</option>
-                <option value="template2">Template 2</option>
+                <option value="simple">Simple</option>
+                <option value="professional">Professional</option>
+                <option value="creative">Creative</option>
             </select>
 
             <button type="submit">Generate Resume</button>
         </form>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
